@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,13 @@
        * {
         font-size: 16px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0rem;
+        }
+
+        .cabecalho {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: start;
         }
 
         .container {
@@ -16,7 +23,7 @@
             height: 30rem;
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
+            align-items: start;
         }
 
         .item {
@@ -24,18 +31,64 @@
             color: white;
             font-weight: bold;
             padding: 1rem;
-            margin: 1rem;
-            border: 1 px solid #c2c2c2;
-            box-shadow: 0.5rem .5rem .3 rem .01rem #c2c2c2;
             width: 5rem;
             height: 5rem;
         }
+        .logo {
+            flex-grow: 1;
+        }
+        .titulo-do-site {
+            flex-grow: 12;
+        }
+        .sandwich-menu {
+            flex-grow: 1;
+        }
+        .painel {
+            height: 30rem;
+            display: flex;
+        }
+        .menu-lateral {
+            border: 3px solid green;
+            flex-grow: 3;
+        }
+        .parte-principal{
+            border: 3px solid green;
+            padding: 1rem;
+            margin: .1rem;
+            flex-grow: 11;
+        }
+        .tile{
+            background-color: #e3e3e3;
+            height: 3rem;
+            margin: .5rem;
+        }
+        .tile:hover {
+            background-color: blue;
+            color: white;
+        }
     </style>
 <body>
-    <div class="container">
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
-    </div>
+    <header class="cabecalho">
+        <div class="item logo">logo</div>
+        <div class="item titulo-do-site">titulo do site</div>
+        <div class="item sandwich-menu">menu</div>
+    </header>
+    <section class="painel">
+        <nav class="menu-lateral">
+            <a href="https://www.google.br">
+               <div class="tile">item 1</div>
+            </a>
+            <a href="https://www.youtube.com"></a>
+             <div class="tile">item 2</div>
+            </a>
+            <a href="https://primevideo.com/"> 
+                <div class="tile">item 3</div>
+            </a>
+            <a href="https//www.netflix.com"> 
+                <div class="tile">item 4</div>
+            </a>
+        </nav>
+        <main class="parte-principal">Parte principal do site</main>
+    </section>
 </body>
 </html>
